@@ -1,0 +1,43 @@
+# original
+
+## quantitative, output
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/quantitative/recordings/vicon_03301_01 --output_folder $PROX_data/output
+
+
+## qualitative, output
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output
+
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output --sdf_penetration False --s2m False --m2s False
+
+# new
+
+## quantitative, output-1, use_joint_loss_3d
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/quantitative/recordings/vicon_03301_01 --output_folder $PROX_data/output-1 --use_joint_loss_3d True
+
+## quantitative, output-2, drop_noise
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/quantitative/recordings/vicon_03301_01 --output_folder $PROX_data/output-2 --drop_noise True
+
+## quantitative, output-3 new_depth_loss, drop_noise
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/quantitative/recordings/vicon_03301_01 --output_folder $PROX_data/output-3 --new_depth_loss True --drop_noise True
+
+
+## qualitative, output-1, use_joint_loss_3d
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output-1 --use_joint_loss_3d True
+
+## qualitative, output-2, drop_noise
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output-2 --drop_noise True
+
+## qualitative, output-3, new_depth_loss, drop_noise
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output-3 --new_depth_loss True --drop_noise True
+
+## qualitative, output-4, use_joint_penetration
+python main.py --config ../cfg_files/PROXD-test.yaml --recording_dir $PROX_data/qualitative/recordings/BasementSittingBooth_00142_01 --output_folder $PROX_data/output-4 --joint_penetration True --sdf_penentration False --s2m False --m2s False
+
+
+# evaluate
+python evaluate.py --config ../cfg_files/PROXD-test.yaml
+
+
+
+# visualize
+python viz/viz_fitting.py $PROX_data/output/BasementSittingBooth_00142_01
