@@ -41,3 +41,20 @@ python evaluate.py --config ../cfg_files/PROXD-test.yaml
 
 # visualize
 python viz/viz_fitting.py $PROX_data/output/BasementSittingBooth_00142_01
+
+
+
+# note
+gt = ground truth
+fn = file name
+lbl = label
+vn = vertex normal
+
+# calibration
+c: 2
+f: 2
+k: distortion parameter, 5
+camera_mtx: intrinsic parameter, 3x3
+view_mtx: extrinsic parameter, [R t], 3x4
+R: 3
+T: 3
