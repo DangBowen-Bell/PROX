@@ -2,6 +2,8 @@ Code repository for my bachelor graduate design.
 
 In this repository, I add some modifications based on [PROXD](https://github.com/mohamedhassanmus/prox) to improve the performance of 3D human reconstruction from a single RGBD image.
 
+![](imgs/results.png)
+
 
 ## Features
 In the original implementation, the depth loss is defined as the Chamfer Distance between the human scan and human vertices. 
