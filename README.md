@@ -1,8 +1,10 @@
-Code repository for my bachelor graduate design.
-
-In this repository, I add some modifications based on [PROXD](https://github.com/mohamedhassanmus/prox) to improve the performance of 3D human reconstruction from a single RGBD image.
+# PROXD with Improvements
 
 ![](imgs/results.png)
+
+Code repository for my undergraduate thesis.
+
+In this repository, I add some modifications based on [PROXD](https://github.com/mohamedhassanmus/prox) to improve the performance of 3D human reconstruction from a single RGBD image.
 
 
 ## Features
